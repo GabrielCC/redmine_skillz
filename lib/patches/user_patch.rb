@@ -19,5 +19,9 @@ module UserPatch
   end
   
   module InstanceMethods
+    def user_skills
+      skills = user_skill.joins(:skill,:skill_level).includes(:skill,:skill_level).order('`order` DESC').order('skills_name ASC')
+      skills
+    end
   end    
 end

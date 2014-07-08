@@ -1,0 +1,22 @@
+<table>
+	<tr>
+		<th>Skill Name
+		</th>
+		<th>
+			Skill Level
+		</th>
+	</tr>
+	<% 
+		binding.pry 
+	%>
+	<% @user_skills.each do |user_skill| %>
+		<tr>
+			<td>
+				<%= user_skill.skill.name %>
+			</td>
+			<td>
+				<%= user_skill.skill_level.name %>
+			</td>
+		</tr>
+	<% end %>
+</table>
